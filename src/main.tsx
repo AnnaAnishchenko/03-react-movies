@@ -1,13 +1,11 @@
-import { StrictMode } from "react";
+import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import App from "./App";
-import "./index.css";
 import "modern-normalize";
+import "./index.css";
 
-const rootElement = document.getElementById("root");
-
-if (!rootElement) throw new Error("Root element not found");
+const rootElement = document.getElementById("root")!;
 
 createRoot(rootElement).render(
   <StrictMode>

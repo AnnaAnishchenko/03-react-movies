@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
 import { fetchMovies } from "./services/movieService";
 import type { Movie } from "./types/movie";
 import { Toaster } from "react-hot-toast";
