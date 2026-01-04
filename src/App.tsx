@@ -3,7 +3,6 @@ import { fetchMovies } from "./services/movieService";
 import type { Movie } from "./types/movie";
 import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
-import React from "react";
 import MovieGrid from "./components/MovieGrid/MovieGrid";
 import SearchBar from "./components/SearchBar/SearchBar";
 import Loader from "./components/Loader/Loader";
@@ -48,7 +47,7 @@ function App() {
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
       {!isLoading && !isError && (
-        <MovieGrid movies={movies} onSelect={(movie) => console.log(movie)} />
+        <MovieGrid movies={movies} onSelect={openModal} />
       )}
 
       {selectedMovie && (
